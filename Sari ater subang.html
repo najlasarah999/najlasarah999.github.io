@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subang Heritage - Pesona Nanas dan Alam Jawa Barat</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Font dan Warna Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#1e4620', // Hijau tua, mirip Galuh Heritage
+                        'secondary-gold': '#d1a65d', // Emas/Kuning kecoklatan
+                        'accent-bg': '#f3f6f0', // Latar belakang krem/hijau muda
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Menggunakan font Inter dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Tambahan untuk efek judul dengan garis bawah */
+        .styled-heading {
+            font-family: 'Georgia', serif;
+            font-weight: 700;
+            color: #1e4620; /* primary-green */
+            display: inline-block;
+            position: relative;
+        }
+
+        .styled-heading::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -8px;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 4px;
+            background-color: #d1a65d; /* secondary-gold */
+            border-radius: 2px;
+        }
+
+        /* Gaya untuk Hero Section */
+        .hero-section {
+            background-image: url('https://imgur.com/eAhXAix.jpeg'); /* Placeholder untuk perkebunan teh/gerbang Subang */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-accent-bg font-sans text-gray-800">
+
+    <!-- 1. Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/Branding -->
+            <div class="flex-shrink-0">
+                <a href="#" class="text-xl font-bold text-primary-green tracking-wider font-serif">
+                    Subang Heritage
+                </a>
+            </div>
+            <!-- Menu Navigasi -->
+            <div class="flex space-x-6">
+                <a href="#beranda" class="text-gray-600 hover:text-primary-green transition duration-150 font-medium">Beranda</a>
+                <a href="#mengenai" class="text-gray-600 hover:text-primary-green transition duration-150 font-medium">Mengenai</a>
+                <a href="#warisan" class="text-gray-600 hover:text-primary-green transition duration-150 font-medium">Kebudayaan</a>
+                <a href="#kontak" class="text-gray-600 hover:text-primary-green transition duration-150 font-medium">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <header id="beranda" class="hero-section h-[70vh] flex items-center justify-center rounded-b-3xl overflow-hidden shadow-xl">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 text-center text-white p-6 rounded-lg">
+            <!-- Judul Mirip Gerbang/Selamat Datang -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 drop-shadow-lg leading-tight">
+                Jelajahi Pesona Kabupaten Subang
+            </h1>
+            <p class="text-lg sm:text-xl mb-8 font-light max-w-2xl mx-auto drop-shadow-md">
+                Keindahan alam, warisan budaya, dan nanas madu Subang menanti Anda di Jawa Barat.
+            </p>
+            <a href="#warisan" class="inline-block px-8 py-3 text-lg font-semibold bg-secondary-gold text-white rounded-full shadow-lg hover:bg-yellow-700 transition duration-300 transform hover:scale-105">
+                MULAI EKSPLORASI
+            </a>
+        </div>
+    </header>
+
+    <!-- 3. Mengenai Subang Section -->
+    <section id="mengenai" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl styled-heading pb-3">Mengenai Subang, Kota Nanas</h2>
+        </div>
+        <div class="flex flex-col lg:flex-row items-start lg:space-x-12">
+            <!-- Konten Teks -->
+            <div class="lg:w-1/2 text-lg leading-relaxed space-y-6">
+                <p>
+                    Kabupaten Subang, terletak di jalur utara dan dikelilingi oleh pegunungan di selatan, merupakan wilayah yang strategis dan kaya akan kontras alam. Dikenal sebagai **Kota Nanas** karena produksi Nanas Madu Simadu yang melimpah, Subang menawarkan perpaduan unik antara dataran rendah yang subur, pesisir pantai, dan kawasan dataran tinggi yang sejuk.
+                </p>
+                <p>
+                    Warisan sejarahnya mencakup situs-situs peninggalan kerajaan Sunda dan era kolonial, sementara budayanya kental dengan seni tradisional khas Jawa Barat. Dari hamparan perkebunan teh di Ciater hingga kesibukan Pelabuhan Patimban, Subang adalah jendela digital untuk mengupas tuntas kekayaan lokal dari masa lalu hingga inovasi kontemporer.
+                </p>
+            </div>
+            <!-- Placeholder Peta/Visual -->
+            <div class="lg:w-1/2 mt-10 lg:mt-0 p-8 bg-primary-green text-white rounded-xl shadow-lg flex items-center justify-center min-h-[300px] transform transition duration-500 hover:shadow-2xl hover:scale-[1.01] cursor-pointer">
+                <p class="text-2xl font-bold tracking-wider text-center">
+                </p>
+                <!-- Tautan fiktif yang akan membuka peta interaktif -->
+                <div class="absolute bottom-4 text-sm opacity-80">
+                    <p>Subang: Gateway to the North Coast and Southern Highlands</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Jelajahi Warisan Lokal Section -->
+    <section id="warisan" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl styled-heading pb-3">Jelajahi Warisan Subang Lokal</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1: Destinasi Wisata -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary-gold transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="text-3xl text-primary-green mb-3">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-primary-green">Destinasi Wisata</h3>
+                    <p class="text-gray-600 mb-4">
+                        Nikmati pemandian air panas Ciater, keindahan Curug Cijalu, dan kebun teh yang menyejukkan. Jelajahi juga pesisir utara seperti Pantai Pondok Bali.
+                    </p>
+                    <a href="#" onclick="openModal('wisata'); return false;" class="text-secondary-gold font-medium hover:text-primary-green flex items-center group">
+                        Baca Detail Lengkap
+                        <span class="ml-1 transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Card 2: Kuliner Khas & Nanas Madu -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary-gold transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="text-3xl text-primary-green mb-3">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3 .895-3 2 1.343 2 3 2m0-8c2.21 0 4 1.343 4 3s-1.79 3-4 3-4 1.343-4 3 1.79 3 4 3z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-primary-green">Kuliner Khas & Nanas Madu</h3>
+                    <p class="text-gray-600 mb-4">
+                        Subang adalah surga Nanas Madu Simadu. Cicipi juga Pepes Ikan, Pindang Serani, dan Gula Aren yang merupakan oleh-oleh khas Subang.
+                    </p>
+                    <a href="#" onclick="openModal('kuliner'); return false;" class="text-secondary-gold font-medium hover:text-primary-green flex items-center group">
+                        Baca Detail Lengkap
+                        <span class="ml-1 transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Card 3: Sejarah & Warisan Budaya -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary-gold transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="text-3xl text-primary-green mb-3">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-primary-green">Sejarah & Warisan Budaya</h3>
+                    <p class="text-gray-600 mb-4">
+                        Mengulas jejak Kerajaan Sunda dan situs-situs bersejarah seperti Situs Purba Kalijati. Kenali juga kesenian Sisingaan dan Tari Jaipong khas Subang.
+                    </p>
+                    <a href="#" onclick="openModal('sejarah'); return false;" class="text-secondary-gold font-medium hover:text-primary-green flex items-center group">
+                        Baca Detail Lengkap
+                        <span class="ml-1 transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Card 4: Seni Tradisional -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary-gold transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="text-3xl text-primary-green mb-3">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v10m-2 0h4m-4 0h-3a2 2 0 01-2-2V7a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2h-3m-1-10h-2m2 0h2m-2 0V5"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-primary-green">Seni Tradisional</h3>
+                    <p class="text-gray-600 mb-4">
+                        Mendalami kesenian khas Subang, termasuk Kesenian Sisingaan (tradisi arak-arakan boneka singa) dan berbagai jenis pertunjukan wayang.
+                    </p>
+                    <a href="#" onclick="openModal('seni'); return false;" class="text-secondary-gold font-medium hover:text-primary-green flex items-center group">
+                        Baca Detail Lengkap
+                        <span class="ml-1 transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Card 5: Inovasi & Ekonomi Lokal -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary-gold transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="text-3xl text-primary-green mb-3">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-primary-green">Inovasi & Ekonomi Lokal</h3>
+                    <p class="text-gray-600 mb-4">
+                        Sorotan pada Pelabuhan Patimban sebagai pusat ekonomi baru dan pengolahan hasil pertanian, terutama Nanas, menjadi produk bernilai tinggi.
+                    </p>
+                    <a href="#" onclick="openModal('ekonomi'); return false;" class="text-secondary-gold font-medium hover:text-primary-green flex items-center group">
+                        Baca Detail Lengkap
+                        <span class="ml-1 transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Card 6: Keagamaan & Spiritual -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary-gold transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="text-3xl text-primary-green mb-3">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-primary-green">Keagamaan & Spiritual</h3>
+                    <p class="text-gray-600 mb-4">
+                        Pelajari tradisi keagamaan Islam yang kental di Subang dan situs-situs bersejarah Islam serta pusat-pusat pendidikan agama.
+                    </p>
+                    <a href="#" onclick="openModal('keagamaan'); return false;" class="text-secondary-gold font-medium hover:text-primary-green flex items-center group">
+                        Baca Detail Lengkap
+                        <span class="ml-1 transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer -->
+    <footer id="kontak" class="bg-primary-green text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Subang Heritage. Dibuat dengan cinta untuk mempromosikan Pesona Subang.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-secondary-gold hover:text-white transition duration-150">Kebijakan Privasi</a>
+                <a href="#" class="text-secondary-gold hover:text-white transition duration-150">Syarat Penggunaan</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Structure (Hidden by default) -->
+    <div id="detailModal" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden flex items-center justify-center p-4" onclick="closeModal()">
+        <!-- Modal Content (untuk mencegah event klik dari latar belakang) -->
+        <div class="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 scale-95 opacity-0" onclick="event.stopPropagation()">
+            <!-- Header -->
+            <div class="p-6 border-b border-gray-200 flex justify-between items-center sticky top-0 bg-white">
+                <h3 id="modalTitle" class="text-2xl font-bold text-primary-green"></h3>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-900 transition duration-150">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <!-- Body -->
+            <div class="p-6">
+                <img id="modalImage" src="" alt="Gambar Detail Subang" class="w-full h-auto rounded-lg mb-6 shadow-lg object-cover">
+                <p id="modalDetail" class="text-gray-700 text-base leading-relaxed whitespace-pre-wrap"></p>
+            </div>
+            <!-- Footer -->
+            <div class="p-4 border-t border-gray-200 text-right sticky bottom-0 bg-white">
+                <button onclick="closeModal()" class="px-6 py-2 bg-secondary-gold text-white font-semibold rounded-full hover:bg-yellow-700 transition duration-300">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal Logic and Data -->
+    <script>
+        const subangData = {
+            'wisata': {
+                title: 'Destinasi Wisata Subang',
+                detail: 'Subang menawarkan wisata alam yang sangat beragam. Di wilayah selatan, Anda bisa menikmati kesejukan Pemandian Air Panas Ciater yang bersumber dari Gunung Tangkuban Parahu, serta hamparan Kebun Teh yang mempesona. Untuk pecinta air terjun, Curug Cijalu adalah destinasi yang wajib dikunjungi. Sementara di utara, Pantai Pondok Bali menawarkan suasana pantai yang tenang dan menjadi gerbang menuju Pelabuhan Patimban.',
+                image: 'https://i.imgur.com/mhITjYa.jpeg'
+            },
+            'kuliner': {
+                title: 'Kuliner Khas & Nanas Madu Subang',
+                detail: 'Nanas Madu Simadu adalah ikon Subang yang terkenal dengan rasa manisnya yang khas. Selain itu, Subang juga memiliki hidangan laut dari pesisir utara seperti Pepes Ikan dan Pindang Serani. Jangan lupa mencicipi olahan nanas seperti dodol nanas dan keripik nanas, serta mencari Gula Aren kualitas terbaik sebagai oleh-oleh.',
+                image: 'https://i.imgur.com/4JnO4NT.jpeg'
+            },
+            'sejarah': {
+                title: 'Sejarah & Warisan Budaya Subang',
+                detail: 'Jejak sejarah Subang terkait erat dengan era kerajaan Sunda. Salah satu situs penting adalah Museum Subang. Subang juga memiliki peran penting pada masa perjuangan kemerdekaan, khususnya peristiwa Kalijati. Warisan budayanya mencakup kesenian Sisingaan, yang merupakan pertunjukan arak-arakan boneka singa yang energik, serta Tari Jaipong yang dikenal luas di Jawa Barat.',
+                image: 'https://i.imgur.com/tkEAcdK.jpeg'
+            },
+            'seni': {
+                title: 'Seni Tradisional Subang',
+                detail: 'Kesenian Sisingaan adalah pertunjukan utama Subang yang memadukan tarian, musik, dan atraksi boneka singa. Selain itu, Subang juga melestarikan seni pertunjukan seperti Wayang Golek dan berbagai jenis tari tradisional Sunda yang menjadi bagian tak terpisahkan dari ritual adat dan perayaan.',
+                image: 'https://i.imgur.com/lZbuDVE.jpeg'
+            },
+            'ekonomi': {
+                title: 'Inovasi & Ekonomi Lokal Subang',
+                detail: 'Perkembangan ekonomi Subang kini didorong oleh sektor pertanian, pariwisata, dan industri. Pelabuhan Patimban menjadi proyek strategis nasional yang meningkatkan peran Subang sebagai pusat logistik. Fokus inovasi adalah pada pengolahan hasil bumi, khususnya nanas, menjadi berbagai produk bernilai tambah tinggi.',
+                image: 'https://i.imgur.com/rltmLt0.jpeg'
+            },
+            'keagamaan': {
+                title: 'Keagamaan & Spiritual Subang',
+                detail: 'Subang memiliki pusat-pusat keagamaan Islam yang bersejarah dan aktif. Berbagai pesantren dan masjid tua menjadi saksi perkembangan Islam di wilayah Pantura. Tradisi dan ritual keagamaan lokal seringkali berpadu dengan unsur budaya Sunda, menciptakan kekayaan spiritual yang unik dan mendalam.',
+                image: 'https://i.imgur.com/zI3XxJb.jpeg'
+            }
+        };
+
+        function openModal(key) {
+            const data = subangData[key];
+            const modal = document.getElementById('detailModal');
+            const modalContent = modal.querySelector('div.max-w-4xl');
+
+            if (data) {
+                document.getElementById('modalTitle').textContent = data.title;
+                document.getElementById('modalDetail').textContent = data.detail;
+                document.getElementById('modalImage').src = data.image;
+
+                modal.classList.remove('hidden');
+                // Terapkan efek scale-in yang mulus
+                setTimeout(() => {
+                    modalContent.classList.remove('scale-95', 'opacity-0');
+                    modalContent.classList.add('scale-100', 'opacity-100');
+                }, 10); // Penundaan kecil agar transisi CSS berjalan
+                document.body.style.overflow = 'hidden'; // Mencegah scrolling latar belakang
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('detailModal');
+            const modalContent = modal.querySelector('div.max-w-4xl');
+
+            // Terapkan efek scale-out yang mulus
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+
+            // Sembunyikan modal setelah transisi selesai (300ms)
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Kembalikan scrolling
+            }, 300);
+        }
+
+        // Tutup modal dengan tombol Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !document.getElementById('detailModal').classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
